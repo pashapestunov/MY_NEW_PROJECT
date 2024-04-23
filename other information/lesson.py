@@ -45,4 +45,12 @@ print(number)
 num = [1, 2, 3, 4, 5, 6, 7, 8, 9,]
 num.reverse()   #Изменяет последовательность элементов на обратную
 
+diter_3 = {x for x in "abracadabra" if x not in "abc"}  #Выводит все буквы кроме "abc"
+print(diter_3)
+
+diter_two = {x: x**2 for x in range(5) if x % 2 == 0}  #  x ** range и выводит на экран резулитаты которые при
+print(diter_two)                                       # делении на 2 не имеют остатка
+
+diter = {x: x**2 for x in (2, 3, 4)}
+print(diter)
 

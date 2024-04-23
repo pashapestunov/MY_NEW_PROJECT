@@ -18,7 +18,7 @@ alhfavit_EU =  ('ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ')
 alhfavit_RU = ('АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ')
 
 run = True
-itog_RU = ""
+itog_RU = ""                                #создаем переменную для вывода итогового сообщения
 itog_RU_back = ""
 itog_EU = ""
 itog_EU_back = ""
@@ -38,10 +38,10 @@ while run:
         land = input("Выберите язык eu/ru: ")
         if land == "ru":
             for i in message:
-                mesto = alhfavit_RU.find(i)
-                new_mesto = mesto + 3
+                mesto = alhfavit_RU.find(i)   #Вычисляем места символов в списке
+                new_mesto = mesto + 3         #Сдвигаем символы на указанный в переменной smeshenie шаг
                 if i in alhfavit_RU:
-                    itog_RU += alhfavit_RU[new_mesto]
+                    itog_RU += alhfavit_RU[new_mesto]   # Задаем значения в итог
                 else:
                     itog_RU += i
         else:

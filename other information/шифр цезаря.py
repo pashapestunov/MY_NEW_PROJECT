@@ -7,29 +7,70 @@
 дешифровать) вызывается соответствующая функция,
 результат выводится в консоль.
 """
+HELP = """
+help - напечатать справку по программе.
+text - добавить текст для шифровки.
+show - показывает заметки.
+back - Дешифровать текст.
+"""
 
 alhfavit_EU =  ('ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ')
 alhfavit_RU = ('АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ')
 
-step_cip = int(input("Шаг шифраваня: "))         #Создаем переменную с шагом шифровки
-message = input("Сообщение для шифровки: ").upper()     #создаем переменнную, куда запишем наше сообщение
-itog = ""                                   #создаем переменную для вывода итогового сообщения
-land = input("Выберите язык EU/RU: ")
+run = True
+itog_RU = ""                                #создаем переменную для вывода итогового сообщения
+itog_RU_back = ""
+itog_EU = ""
+itog_EU_back = ""
 
-if land == "RU":
-    for i in message:
-        mesto = alhfavit_RU.find(i)                    #Вычисляем места символов в списке
-        new_mesto = mesto + step_cip                #Сдвигаем символы на указанный в переменной smeshenie шаг
-        if i in alhfavit_RU:
-            itog += alhfavit_RU[new_mesto]       # Задаем значения в итог
+while run:
+    command = input("Введите команду: ")
+    if command == "help":
+        print(HELP)
+    elif command == "show":
+        print("заметки на русском:", itog_RU)
+        print("заметки на русском Дешифрованые:", itog_RU_back)
+        print("заметки на английском:", itog_EU)
+        print("заметки на английском Дешифрованные:", itog_EU_back)
+    elif command == "text":
+        # step_cip = int(input("Шаг шифраваня: "))
+        message = input("Сообщение для шифровки: ").upper()
+        land = input("Выберите язык eu/ru: ")
+        if land == "ru":
+            for i in message:
+                mesto = alhfavit_RU.find(i)   #Вычисляем места символов в списке
+                new_mesto = mesto + 3         #Сдвигаем символы на указанный в переменной smeshenie шаг
+                if i in alhfavit_RU:
+                    itog_RU += alhfavit_RU[new_mesto]   # Задаем значения в итог
+                else:
+                    itog_RU += i
         else:
-            itog += i
-else:
-    for i in message:
-        mesto = alhfavit_EU.find(i)
-        new_mesto = mesto + step_cip
-        if i in alhfavit_EU:
-            itog += alhfavit_EU[new_mesto]
+            for i in message:
+                mesto = alhfavit_EU.find(i)
+                new_mesto = mesto + 3
+                if i in alhfavit_EU:
+                    itog_EU += alhfavit_EU[new_mesto]
+                else:
+                    itog_EU += i
+    elif command == "back":
+        message = input("Сообщение для Дешифровки: ").upper()
+        land = input("Выберите язык eu/ru: ")
+        if land == "ru":
+            for i in message:
+                mesto = alhfavit_RU.find(i)
+                new_mesto = mesto - 3
+                if i in alhfavit_RU:
+                    itog_RU_back += alhfavit_RU[new_mesto]
+                else:
+                    itog_RU_back += i
         else:
-            itog += i
-print(itog)
+            for i in message:
+                mesto = alhfavit_EU.find(i)
+                new_mesto = mesto - 3
+                if i in alhfavit_EU:
+                    itog_EU_back += alhfavit_EU[new_mesto]
+                else:
+                    itog_EU_back += i
+    else:
+        print("ОШИБКА! Введите команду \"help\" ")
+        break
