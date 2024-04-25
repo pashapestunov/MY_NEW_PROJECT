@@ -23,4 +23,4 @@ def area(room):
 
 result = map(area, rooms)
 result_2 = reduce(lambda x, y: x + y, result)
-print("Площаль квартиры: ", result_2)
+print("Площадь квартиры: ", result_2)
