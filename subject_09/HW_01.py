@@ -51,3 +51,16 @@ for file in files:
 
 print("Файлы успешно рассортированы.")
 
+destination_dir = os.path.join('..', 'subject_09', 'files_py')  # путь к целевой папке
+files_count = {}        # создаем словарь для хранения кол-ва файдов в каждой папке
+
+# Получаем список всех папок в целевой папке
+subdirectories = [d for d in os.listdir(destination_dir) if os.path.isdir(os.path.join(destination_dir, d))]
+
+# Подсчитываем кол-во файлов в каждой папке
+for folder in subdirectories:
+    files_count[folder] = len(os.listdir(os.path.join(destination_dir, folder)))
+
+# Выводим корл-ва файлов в каждой папке
+for folder, count in files_count.items():
+    print(f"В папке {folder} перемещено {count} файлов.")
