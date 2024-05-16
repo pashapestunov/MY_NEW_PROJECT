@@ -7,20 +7,16 @@
 списке.
 """
 
-run = True
+numbers = [1, 2, 3, 3, 3, 4, 5, 6, 7, 7, 8, 9]
+print(f'Дан список: {numbers}')
 
-numbers = [5, 3, 4, 7, 12, 33, 1, 2, 3, 54, 11, 12,]
-
-print(f'\nДан список: {numbers}')
-
-result_list = {}
+some_list = {}
 
 for item in numbers:
-    result_list[item] = result_list.get(item, 0) + 1
+    some_list[item] = some_list.get(item, 0) + 1
 
-clones = {item: count for item, count in result_list.items() if count >1}
-
+clones = {item: count for item, count in some_list.items() if count > 1}
 if clones:
-    print(f'Одинаковые значения: {clones}')
+    print(f'Одинаковых значений: {clones}')
 else:
-    print('Одинаковых сначений нет!')
+    print('Одинаковых значений нет!')
