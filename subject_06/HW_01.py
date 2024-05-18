@@ -6,6 +6,7 @@
 вывести позицию искомого элемента в исходном списке.
 """
 
+
 def find_num(list_1, num, min, max):
     if max >= min:
         middle = min + (max - min) // 2
