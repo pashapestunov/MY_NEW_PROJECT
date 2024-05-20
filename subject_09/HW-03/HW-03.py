@@ -34,4 +34,3 @@ def count_words_in_file(file_path):
 file_path = "random-text.txt"
 
 count_words_in_file(file_path)
-

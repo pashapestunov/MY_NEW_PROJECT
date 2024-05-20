@@ -5,6 +5,7 @@
 
 import time
 
+
 def timeit(func):
     def wrapper(*args, **kwargs):
         start_time = time.time()
@@ -14,10 +15,12 @@ def timeit(func):
         return result
     return wrapper
 
+
 # Пример использования
 @timeit
 def example_function():
     time.sleep(1)  # имитация долгой работы
     print("Функция выполнена")
+
 
 example_function()

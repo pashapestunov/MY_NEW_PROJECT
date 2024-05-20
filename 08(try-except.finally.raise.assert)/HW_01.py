@@ -6,11 +6,13 @@
 исключений.
 """
 
+
 def index(height, weight):
     if height <= 0 or weight <= 0:
         return "Вес или Рост не может быть отрицательным или равняться нулю"
     imt = weight / (height / 100) **2
     return imt
+
 
 def imt_info(imt):
     if imt <= 20:
@@ -34,4 +36,4 @@ try:
     print(f"Интрепритация: {talk_you}")
 
 except ValueError as hw:
-    print("Ошибка", {hw})
+    print(f"Ошибка {hw}")

@@ -18,8 +18,10 @@ rooms = [
 {"name": "Room 3", "length": 7, "width": 6.3},
 ]
 
+
 def area(room):
     return room["length"] * room["width"]
+
 
 result = map(area, rooms)
 result_2 = reduce(lambda x, y: x + y, result)
