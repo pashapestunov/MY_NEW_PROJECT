@@ -75,4 +75,3 @@ while run:
         print("ОШИБКА! Введите команду \"help\" ")
         break
 
-

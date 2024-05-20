@@ -4,11 +4,21 @@
 (делится только на единицу и на себя.
 """
 
-num = int(input("Введите любое число для проверки его на простое: "))
-for i in range(2, num):
-    value = num % 2
-if value > 0:
-    print("Ваше число просто")
-elif value == 0:
-    print("Ваше число не просто")
+import math
 
+
+num = int(input('Введите число для проверки: '))
+
+if num <= 1:
+    print('Число дожно быть больше 1')
+else:
+    is_prime = True
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % 2 == 0:
+            is_prime = False
+            break
+
+    if is_prime:
+        print('Ваше чило простое')
+    else:
+        print('Ваше число не простое')

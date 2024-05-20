@@ -13,4 +13,4 @@ while a != 0 and b != 0:
     else:
         b = b % a
 
-print("НОД =", a + b)
+print('НОД вашего чисоа будет', a + b)
