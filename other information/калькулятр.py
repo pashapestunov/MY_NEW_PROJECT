@@ -12,6 +12,7 @@ def divide(x, y):
         return "Ошибка: деление на ноль"
     return x / y
 
+
 print("Выберите операцию:")
 print("1. Сложение")
 print("2. Вычитание")

@@ -15,6 +15,7 @@ def find_num(lst, search_num):
             low = middle + 1
     return search_res
 
+
 lst = [2, 13, 15, 24, 66, 76, 88, 99]
 value = int(input("Введите число для поиска: "))
 
@@ -27,6 +28,7 @@ else:
 """
 Второй способ 
 """
+
 
 def find_num(list_1, num, min, max):
     if max >= min:
