@@ -44,7 +44,7 @@ with open('some_text_file.txt.py', 'r') as some_text:
     read_lines = some_text.readlines()
 print(read_lines)
 
-"""Для того, чтобы записать какие-либо данные в файл, нужно открыть его с помощью конструкции with ... as, но уже 
+"""Для того, чтобы записать какие-либо данные в файл, нужно открыть его с помощью конструкции with ... as, но уже
 указать режим доступа к файлу “w” (write)."""
 
 data_some = ("\n\'Combo line\'")

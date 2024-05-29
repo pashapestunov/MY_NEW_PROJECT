@@ -2,6 +2,8 @@
 В текстовый файл построчно записаны фамилия и имя учащихся класса и оценка за контрольную. Вывести на экран
 всех учащихся, чья оценка меньше трёх баллов.
 """
+
+
 def find_students_below_grade(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file: # открываем файл для чтения
@@ -13,6 +15,7 @@ def find_students_below_grade(file_path):
                     print("{} {} оценка: {}".format(last_name, first_name, grade))
     except FileNotFoundError:
         print("Файл не найден")
+
 
 file_path = 'class.txt' # путь к файлу
 

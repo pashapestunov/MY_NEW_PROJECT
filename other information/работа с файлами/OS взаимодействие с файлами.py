@@ -34,7 +34,7 @@ print(f"test_dir exists {os.path.exists('test_dir')}")     # True there is file
 
 """Ещё одна полезная команда – os.listdir(), она показывает всё содержимое каталога."""
 
-print(os.listdir('../subject_05'))
+print(os.listdir('../../subject_05'))
 
 """C помощью модуля os достаточно просто переименовать файл:"""
 
@@ -48,7 +48,7 @@ print(os.listdir('../subject_05'))
 """Если вывод os.listdir() оказывается недостаточным, и нам нужно узнать состав всех вложенных каталогов, можно
 использовать os.walk() – генератор дерева каталогов. ”.” здесь – корень дерева."""
 
-for subject_05, subject_06, subject_07 in os.walk("."):
+for subject_05, subject_06, subject_07 in os.walk(".."):
 
     for lesson in subject_06:
         print("Каталог:", os.path.join(subject_05, lesson))
