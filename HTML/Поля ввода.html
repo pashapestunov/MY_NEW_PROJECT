@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>поля ввода</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+    <form name="test" action="" method="post">
+        <!-- вместо плэйхолдер можно использовать value="" тогда текст не будет прозрачным-->
+        <label for="name">Введите имя:</label><input type="text" placeholder="Поиск..." name="name"
+                                         title="Подсказка" maxlength="4" id="name"/>
+        <br /><br />
+        <label for="date">День рождения</label><input type="date" name="date" id="date"/>
+        <br /><br />
+        <label for="prise">Сколько стоит</label><input type="range" name="prise" id="prise"/>
+        <br /><br />
+        <label for="male>">Мужской:</label><input type="radio" name="state" id="male"/>
+        <label for="female>">Женский:</label><input type="radio" name="state" id="female"/>
+        <br /><br />
+        <input type="file" />
+        <br /><br/>
+        <input type="color"/>
+        <br /><br />
+        <label for="check">Со всем согласен </label><input type="checkbox" name="check" id="check"/>
+        <label for="check">Со всем согласен </label><input type="checkbox" name="check" id="check"/>
+        <label for="check">Со всем согласен </label><input type="checkbox" name="check" id="check"/>
+        <br /><br />
+        <input type="button" value="отправить button"/>
+        <input type="submit" value="отправить submit"/>
+        <input type="reset"/>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>поля ввода</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+    <details>
+        <summary>Информация об авторе</summary>
+        <p>lox</p>
+        <p>durak</p>
+    </details>
+    <br /><br />
+    <p>Проверка 123 <mark>проверяем</mark>  123</p>
+    <br />
+    <br />
+    <ruby>
+        432<rt>x</rt>
+        +
+        285<rt>y</rt>
+        =
+        717<rt>z</rt>
+    </ruby>
+    <br />
+    <br />
+    <progress max="100" value="35">
+    загружено на <span id="value">24</span>%
+    </progress>
+    <br />
+    <br />
+    <form oninput="result.value=(cm.value/2.54).toFixed(2)">
+        <p>Введите длинну в см:
+        <input type="number" name="cm" autofocus/></p>
+        <p>Длинна в дюймах: <output name="result">0</output></p>
+    </form>
+
+</body>
+</html>

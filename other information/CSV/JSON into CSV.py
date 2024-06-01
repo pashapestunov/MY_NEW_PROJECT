@@ -71,24 +71,53 @@ import json
 # except Exception as ex:
 #     print(f'Ошибка {str(ex)}')
 
-def find_person(filename, name):
+# def find_person(filename, name):
+#     try:
+#         with open(filename, 'r', newline='') as csv_file:
+#             reader = csv.DictReader(csv_file)
+#
+#             for row in reader:
+#                 if row['name'] == name:
+#                     return row
+#         return f'сотрудник с именем {name} не найден'
+#
+#     except FileNotFoundError:
+#         return 'file not found'
+#     except Exception as e:
+#         return f'ошибка {str(e)}'
+#
+#
+# filename = 'employees.csv'
+# name = 'Pasha Pestunov'
+# result = find_person(filename, name)
+# print(result)
+
+
+def find_language(filename, language):
+    employees = []
+
     try:
         with open(filename, 'r', newline='') as csv_file:
             reader = csv.DictReader(csv_file)
 
             for row in reader:
-                if row['name'] == name:
-                    return row
-        return f'сотрудник с именем {name} не найден'
-
+                if 'languages' in row and language.lower() in row['languages'].lower():
+                    employees.append(row)
+        if employees:
+            return employees
+        else:
+            return f'Сотрудник владеющей языком {language} не найден.'
     except FileNotFoundError:
-        return 'file not found'
+        return 'файл не найден'
     except Exception as e:
         return f'ошибка {str(e)}'
 
 
 filename = 'employees.csv'
-name = 'Pasha Pestunov'
-result = find_person(filename, name)
-print(result)
+language = input('Введите язык програмирования: ')
+result = find_language(filename, language)
+
+if isinstance(result, list):
+    for employee in result:
+        print(employee)
 
