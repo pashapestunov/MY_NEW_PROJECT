@@ -1,0 +1,40 @@
+* {
+    text-decoration: none;
+}
+html {
+    background: url('https://vikna.tv/wp-content/uploads/2022/07/10/vidpochynok-2022.jpg') no-repeat center top white;
+}
+#header {color: green}
+#text {color: red}
+h3.style {background: green}
+p i {color: red}
+p.exemple, b {
+font-size: 30px;
+font-weight: bold;
+}
+
+.href {
+    color: #5f1a1a;
+}
+.href:hover {
+    color: #1d5e19;
+}
+
+.href:active {
+    color: red;
+}
+#header:hover {background: red}
+#textstyle {
+    color: yellow;
+    font-size: 1.9em;
+    font-weight: normal;
+    font-family: comic sans MS;
+    text-align: center;
+    text-transform: capitalize;
+    word-spacing: 15px;
+    letter-spacing: 0px;
+    line-weight: 10px;
+}
+p {
+    text-indent: 1.1em;
+}
