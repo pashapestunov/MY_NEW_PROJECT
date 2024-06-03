@@ -1,0 +1,30 @@
+* {
+    background-color: #ffe5b4;
+}
+
+article, aside {
+    background-color: #fafafa;
+    min-height: 400px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    box-sizing: border-box;
+    margin-top: 20px;
+    float: left;
+}
+
+article {
+    width: 60%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+aside {
+width: 25%;
+}
+
+aside ul, li {
+    background-color: white;
+    width: 80%;
+    margin-right: 10%;
+    list-style-type: square;
+}
