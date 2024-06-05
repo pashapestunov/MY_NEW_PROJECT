@@ -64,11 +64,10 @@ article, aside, .aside {
     float: left;
 }
 
-#texts {
-    margin-left: 1%;
+details, #here {
+    margin-left: 2%;
     margin-right: 7%;
-    margin-top: 7%;
-
+    margin-top: 1%;
 }
 
 article {
@@ -171,22 +170,77 @@ form {
     opacity: 1;
 }
 
-/*.clear {
-    clear: both;
-}*/
-
-
-
-
-/*body {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+ul {
+    color: blue;
 }
 
-.container {
-    display: flex;
-}*/
 
+
+/* СТРАНИЦА ВХОДА В АККАУНТ */
+
+
+
+.be_enter {
+    font-size: 2.5em;
+    margin: 15% 0% 2% 0%;
+}
+
+.sing_enter {
+    font-size: 3.5em;
+    margin: 0% 0% 5% 37%;
+}
+
+.name_enter, .password_enter {
+    width: 50%;
+    margin: 1% 25% 0 25%;
+    font-size: 1em;
+    padding: 0.5%;
+}
+
+.sing_in_enter {
+    margin: 1% 25% 0% 25%;
+    border: 1px solid white;
+    height: 45px;
+    width: 50%;
+    padding: 0.7% 0% 0% 20%;
+    background-color: #50a9fb;
+    color: white;
+}
+
+.forgot_enter {
+    font-size: 1em;
+    margin: 1% 0% 0% 43%;
+}
+
+.dont_enter {
+    font-size: 1em;
+    margin: 0% 0% 0% 39%;
+}
+
+.text_enter {
+    font-size: 1em;
+    margin: 3% 0% 0% 29%;
+}
+
+.back_enter {
+    margin: 15% 17% 0% 25%;
+    text-decoration: none;
+    color: black;
+    font-family: comic sans MS;
+}
+
+
+
+/* СТРАНИЦА РЕГИСТРАЦИИ АККАУНТА */
+
+
+
+.be_regis {
+    font-size: 2.5em;
+    margin: 13% 0% 2% 0%;
+}
+
+.dont_regis {
+    font-size: 1em;
+    margin: 1% 0% 0% 40%;
+}
