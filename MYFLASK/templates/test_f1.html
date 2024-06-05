@@ -1,0 +1,64 @@
+{% extends 'test_f.html' %}
+
+{% block title %}
+Be Writer
+{% endblock %}
+
+{% block body %}
+    <div id="head" class="container">
+        <p id="writer">Be Writer</p>
+        <input type="text" placeholder="Поиск..." class="search">
+        <p id="enter" title="Войдите, если у вас есть аккаунт"><u>Вход</u></p>
+        <p id="i">/</p>
+        <p id="regis" title="Зарегистрируйте, если у вас не аккаунта"><u>Регистрация</u></p>
+    </div>
+    <article>
+        <ul id="texts">
+            <li>Фундаментальная медицина</li>
+            <li>История и археология</li>
+            <li>Строительство и архитектура</li>
+            <li>Химические технологии</li>
+            <li>Наука об образовании</li>
+            <li>Биологическте науки</li>
+            <li>Медицинские технологии</li>
+            <li style="opacity: 0.2;">Здесь может быть ваша статья</li>
+        </ul>
+    </article>
+
+    <aside>
+        <select class="select">
+            <option>Выбери статью</option>
+            <option>История и археология</option>
+            <option>Фундаментальная медицина</option>
+            <option>Строительство и архитектура</option>
+            <option>Химические технологии</option>
+            <option>Наука об образовании</option>
+            <option>Биологическте науки</option>
+            <option>Медицинские технологии</option>
+            <option>Фундаментальная медицина</option>
+        </select>
+        <form action="" method="post">
+            <textarea class="grid-container" rows="10" cols="20" name="text"
+                      placeholder="Выбери статью и оставь на нее отзыв..."></textarea>
+            <button class="center-button">опубликовать</button>
+        </form>
+    </aside>
+    <aside class="aside">
+        <p class="p1">Публикация статьи:</p>
+        <input type="text" placeholder="Название статьи..." name="name" title="Введите имя вашей статьи" class="name">
+        <img class="photo" style="opacity: 0.4;" src="https://www.creativefabrica.com/wp-content/uploads/2021/06/22/Folder-Icon-Template-Design-Vector-Graphics-13725642-1-1-580x387.jpg"
+             width="100%" height="60%"
+    title="это картинка содержит красивый вид" alt="файл" border="10px"/>
+        <input class="bott2" type="file">
+    </aside>
+
+
+
+        <div id="footer"></div>
+    <p class="xyi">Think of a footer as a safety net for users who haven’t been able to find the information they’re
+        looking for in other sections of your site. By providing helpful links, you can prevent some visitors
+        from leaving your site to never return. The website footer is the section of content at the very bottom of a
+        web page. It typically contains a copyright notice, link to a privacy policy, sitemap, logo, contact
+        information, social media icons, and an email sign-up form. In short, a footer contains information that
+        improves a website’s overall usability.</p>
+{% endblock %}
